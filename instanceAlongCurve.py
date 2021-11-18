@@ -1803,7 +1803,7 @@ class instanceAlongCurveLocatorManip(OpenMayaMPx.MPxManipContainer):
             curveHandleIndex = self.manipIndexCallbacks[manipIndex][1]
             return self.manipIndexCallbacks[manipIndex][0](self.manipHandleList[curveHandleIndex])
 
-        print "Manip callback not set; returning invalid data!"
+        print ("Manip callback not set; returning invalid data!")
 
         numData = OpenMaya.MFnNumericData()
         numDataObj = numData.create(OpenMaya.MFnNumericData.k3Double)
@@ -1896,4 +1896,4 @@ def getSortedCurveAxisArray(mObject, curveAxisHandleArray, count):
     return sorted(axisHandles, key=getKey)
 
 def printVector(v, s=None):
-    print s + ":" + str(v.x) + ", " + str(v.y) + ", " + str(v.z)
+    print (s + ":" + str(v.x) + ", " + str(v.y) + ", " + str(v.z))
